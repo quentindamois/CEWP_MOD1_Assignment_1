@@ -51,6 +51,6 @@ public class GroveAlgorithmSequentiel {
             }
         }
 
-        System.out.println("Solution found at index " + maxIndex);
+        System.out.println("Solution found at index with sequential " + maxIndex);
     }
 }
