@@ -13,7 +13,7 @@ public class GroveAlgorithmConcurential {
     public static void main(String[] args) {
         ExecutorService executor = Executors.newCachedThreadPool();
         // Define the size of the database
-        n = 8; // You can change this to your desired size
+        n = 10000000; // You can change this to your desired size
 
         // Number of iterations (can be determined based on the database size)
         iterations = (int) (Math.PI / 4 * Math.sqrt(n));
@@ -21,7 +21,7 @@ public class GroveAlgorithmConcurential {
         // Create the database as an array of boolean values
         database = new boolean[n];
         // Assume one entry is marked as the solution
-        database[3] = true; // Change this to your desired solution
+        database[(int)(Math.random() * (n-1))] = true; // Change this to your desired solution
 
         // Initialize the equal superposition
         amplitudes = new double[n];
