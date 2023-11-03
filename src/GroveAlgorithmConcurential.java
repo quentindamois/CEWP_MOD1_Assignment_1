@@ -13,15 +13,17 @@ public class GroveAlgorithmConcurential {
     public static void main(String[] args) {
         ExecutorService executor = Executors.newCachedThreadPool();
         // Define the size of the database
-        n = 10000000; // You can change this to your desired size
-
+        n = 1000000; // You can change this to your desired size
+        System.out.println("The database size is " + n);
         // Number of iterations (can be determined based on the database size)
         iterations = (int) (Math.PI / 4 * Math.sqrt(n));
 
         // Create the database as an array of boolean values
         database = new boolean[n];
         // Assume one entry is marked as the solution
-        database[(int)(Math.random() * (n-1))] = true; // Change this to your desired solution
+        int indexSolution = (int)(Math.random() * (n-1));
+        System.out.println("We put the solution at the index " + indexSolution);
+        database[indexSolution] = true; // Change this to your desired solution
 
         // Initialize the equal superposition
         amplitudes = new double[n];

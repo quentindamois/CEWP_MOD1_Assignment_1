@@ -6,7 +6,8 @@ public class GroveAlgorithmSequentiel {
 
     public static void main(String[] args) {
         // Define the size of the database
-        int n = 67108864; // You can change this to your desired size
+        int n = 1000000; // You can change this to your desired size
+        System.out.println("The database size is " + n);
 
         // Number of iterations (can be determined based on the database size)
         int iterations = (int) (Math.PI / 4 * Math.sqrt(n));
@@ -14,7 +15,9 @@ public class GroveAlgorithmSequentiel {
         // Create the database as an array of boolean values
         boolean[] database = new boolean[n];
         // Assume one entry is marked as the solution
-        database[(int)(Math.random() * (n-1))] = true; // Change this to your desired solution
+        int indexSolution = (int)(Math.random() * (n-1));
+        System.out.println("We put the solution at the index " + indexSolution);
+        database[indexSolution] = true; // Change this to your desired solution
 
         // Initialize the equal superposition
         double[] amplitudes = new double[n];
