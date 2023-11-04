@@ -4,7 +4,9 @@
 
 `
         // Define the size of the database
+        
         int n = 128; // You can change this to your desired size <- you need to change this.
+        
         System.out.println("The database size is " + n + ".");
 `
 
