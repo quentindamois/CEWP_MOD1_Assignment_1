@@ -8,4 +8,4 @@
         System.out.println("The database size is " + n + ".");
 `
 
-The change is only applied to one of the file.
+The change is only applied to the file where the value has been changed.
